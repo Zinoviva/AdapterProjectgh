@@ -8,18 +8,18 @@ public class IntsCalculator implements Ints {
     @Override
     public int sum(int arg0, int arg1) {  //сумма
         //считаем через target
-        return (arg0 + arg1);
+        return target.newFormula().calculate(Calculator.Operation.SUM);
     }
 
     @Override
     public int mult(int arg0, int arg1) {  //умножение
         //считаем через target
-        return arg0*arg1;
+        return target.newFormula().calculate(Calculator.Operation.MULT);
     }
 
     @Override
     public int pow(int a, int b) {  //степень
         //считаем через target
-        return (int) Math.pow(a, b);
+        return new int(target.newFormula().calculate(Calculator.Operation.POW));
     }
 }
